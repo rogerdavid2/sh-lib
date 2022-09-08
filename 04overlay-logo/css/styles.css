@@ -1,0 +1,74 @@
+/*@font-face {
+    font-family: "Sprat";
+    src: url(sprat-variable.ttf);
+}*/
+
+body {
+    background-color: #e6decf;
+
+    font-size: 40px;
+    font-family: Sprat;
+    font-weight: 400;
+    font-variation-settings: "wght" 100;
+    text-transform: uppercase;
+
+    margin: 60px;
+}
+
+section {
+    position: relative;
+    /* position relative combined with z-index! z-index only works with position: absolute; position: relative; or position: sticked.*/
+    z-index: 1;
+    /* make entire section content higher */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+section div {
+    margin: 32px 32px 80px 32px;
+}
+
+section img {
+    margin-bottom: 12px;
+}
+
+/* Lesson starts here */
+/*
+    with position fixed we take it out of the normal 
+    flow of the page.
+    However we must put the filled logo underneath the images
+
+*/
+
+div.filled,
+div.outline {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+    background-image: url(../img/filled-logo.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    pointer-events: none;
+    /* to click underneath z index */
+    /*contain within page */
+}
+
+div.outline {
+    background-image: url(../img/outline-logo.svg);
+    z-index: 2;
+}
+
+/* About the logo */
+
+/*
+    We need a front one and back one!
+    convert logo into outline stroke
+    and export 
+    remove fill when export, and save svg.
+*/

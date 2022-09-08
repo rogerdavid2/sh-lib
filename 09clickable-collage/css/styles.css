@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+
+body {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 32px;
+    line-height: 1.5;
+    background-color: #2727e6;
+    color: #ffffff;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+header {
+    position: fixed;
+    top: 30px;
+    left: 40px;
+    z-index: 1;
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/*
+    move element across -50% of its own width 
+    move element up -50% of its own height to get the accurate middle point.
+    this happens to be the top left corner of the image, and not the actual middle center of the image.
+    on a click or touchend event, this helps us have the image relativley close to the center of the click!
+*/
+img {
+    position: absolute;
+    top: 500px;
+    left: 400px;
+    transform: translate(-50%, -50%) scale(0.5);
+    animation: fadein 0.5s;
+}
+
+img:hover {
+    z-index: 1;
+}

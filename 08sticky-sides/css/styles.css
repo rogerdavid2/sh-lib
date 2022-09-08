@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css?family=Asul:700|Chivo');
+
+body {
+    font-family: Chivo;
+    font-size: 25px;
+    line-height: 1.5;
+
+    background-color: #fffae2;
+    color: #221204;
+}
+
+h2 {
+    font-family: Asul;
+    font-size: 75px;
+    font-weight: 700;
+    line-height: 1.1;
+    text-transform: uppercase;
+    margin: 0 0 40px 0;
+}
+
+p {
+    margin: 40px 0 40px 0;
+}
+
+
+header {
+    background-image: url(../assets/img/cover.jpg);
+    background-size: cover;
+    /* if its bigger squeeze in */
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header img {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+    /* we don't want the logo to stretch*/
+}
+
+/* Sticky Sections */
+
+/* split sections 2/2 */
+section {
+    display: flex;
+}
+
+section div {
+    width: 50%;
+}
+
+/* each odd numbered section row-reverse */
+section:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+
+section div.text {
+    padding: 60px;
+}
+
+section div.full-image {
+    height: 100vh;
+    background-image: url(../assets/img/photo-1.jpg);
+    background-size: cover;
+    background-position: center;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    /*must be used so sticky can work */
+}
+
+section div.image-1 {
+    background-image: url(../assets/img/photo-1.jpg);
+}
+
+section div.image-2 {
+    background-image: url(../assets/img/photo-2.jpg);
+}
+
+section div.image-3 {
+    background-image: url(../assets/img/photo-3.jpg);
+}
+
+
+@media (max-width: 800px) {
+    body {
+        font-size: 16px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    header {
+        height: 75vw;
+    }
+
+    section {
+        display: block;
+    }
+
+    section div {
+        width: 100%;
+    }
+
+    section div.text {
+        padding: 30px;
+    }
+
+    div.full-image {
+        height: 100vw;
+    }
+}

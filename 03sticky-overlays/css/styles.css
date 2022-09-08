@@ -1,0 +1,43 @@
+@import url(//fonts.googleapis.com/css?family=Fjord+One:400);
+
+body {
+    font-family: Fjord One;
+    font-size: 24px;
+    line-height: 1.25;
+
+    background-color: #2727e6;
+    background-image: url(../img/superhi-logo.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: 200px auto;
+
+    color: #ffffff;
+    margin: 600px auto 600px auto;
+    /* top right bottom left */
+    width: 1000px;
+}
+
+section {
+    margin: 100px 0 100px 0;
+    position: relative;
+    /* parent is relative, child is absolute */
+}
+
+section div.overlay {
+    position: absolute;
+    /* to place overlay on image */
+    top: 0;
+    left: 0;
+    background-color: rgba(39, 39, 230, 0.4);
+    width: 100%;
+    min-height: 100%;
+}
+
+section h2 {
+    text-align: center;
+    padding: 40px;
+    position: sticky;
+    /* hold the words in place based on top coordinate */
+    top: 45vh;
+}

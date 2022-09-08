@@ -1,0 +1,45 @@
+body {
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+
+    background-color: #000000;
+    color: #fff;
+}
+
+h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20vmin;
+}
+
+div.ball {
+    background-color: #fff;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    mix-blend-mode: difference;
+    animation: heartbeat 5s infinite;
+}
+
+/* Ball Animation *****/
+@keyframes heartbeat {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1.5);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}

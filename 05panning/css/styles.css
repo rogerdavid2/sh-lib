@@ -1,0 +1,119 @@
+/*@font-face {
+    font-family: Necto Mono;
+    src: url(necto-mono.woff2);
+}*/
+
+body {
+    font-family: Necto Mono;
+    font-size: 32px;
+    line-height: 1.5;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background-color: #111118;
+    color: #ffffff;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+
+    display: flex;
+    justify-content: space-between;
+    padding: 48px;
+}
+
+header a {
+    color: #ffffff;
+    text-decoration: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+
+/* Lesson starts here */
+section.panner div.world {
+    position: absolute;
+    /* gives you ability to move the whole div with images */
+    top: 0;
+    /* these top, left values allows us to pan */
+    left: 0;
+    display: grid;
+    grid-template-columns: 600px 600px 600px 600px;
+    grid-gap: 48px;
+    padding: 48px;
+}
+
+/* Cut off panner to take away scrolling x,y defualt behavior*/
+section.panner {
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    /* we dont want the grid to scroll tho! so go to body tag */
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 600px) {
+    body {
+        font-size: 24px;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    section div.world {
+        grid-gap: 32px;
+    }
+
+    section img {
+        width: 300px;
+    }
+}
+
+
+
+/* Lesson starts here */
+
+/*
+section.panner div.world {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    padding: 48px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 600px);
+    grid-gap: 48px;
+}
+
+@media (max-width: 600px) {
+    body {
+        font-size: 24px;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    section div.world {
+        grid-gap: 32px;
+    }
+
+    section img {
+        width: 300px;
+    }
+} */
